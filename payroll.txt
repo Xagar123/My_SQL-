@@ -37,10 +37,22 @@ manage employee payrolls
 --Ability to retrieve salary data for a particular employee as well as all employees who have
 joined in a particular data range from the payroll service database
 
-SELECT salary FROM employee_payroll
-where name = "Bill";
+  SELECT salary FROM employee_payroll
+  where name = "Bill";
 
 
-SELECT salary FROM employee_payroll
-WHERE start_date BETWEEN CAST('2014-01-01'
-AS DATE) AND DATE(NOW());
+  SELECT salary FROM employee_payroll
+  WHERE start_date BETWEEN CAST('2014-01-01'
+  AS DATE) AND DATE(NOW());
+
+--Ability to add Gender to Employee Payroll Table and Update the Rows to 
+reflect the correct Employee Gender
+  
+  alter table employee_payroll
+  add Gender varchar(10);
+
+  UPDATE employee_payroll 
+  set gender ='M' 
+  where name = 'Bill' 
+  or name ='Charlie';
+
