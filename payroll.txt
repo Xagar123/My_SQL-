@@ -28,3 +28,7 @@ manage employee payrolls
  (2,"Mark","50000","2014-04-11"),
 
  (3,"john","35000","2014-06-01");
+
+--Ability to retrieve all the employee payroll data that is added to payroll service database
+
+  select * from employee_payroll;
