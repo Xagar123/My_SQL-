@@ -5,3 +5,16 @@ CREATE DATABASE payroll_servise;
 SHOW databases;
 
 USE payroll_servise;
+
+--Ability to create a employee payroll table in the payroll service database to
+manage employee payrolls
+
+  Create Table employee_payroll(
+ 
+  id int not null unique auto_increment,
+
+  name varchar(20) not null, 
+
+  salary varchar(10) not null,
+
+  start_date date not null);
