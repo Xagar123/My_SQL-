@@ -56,3 +56,8 @@ reflect the correct Employee Gender
   where name = 'Bill' 
   or name ='Charlie';
 
+--Ability to find sum, average, min, max and number of male and female employees
+
+ SELECT SUM(salary) FROM employee_payroll
+ WHERE gender = 'F' GROUP BY gender;
+
